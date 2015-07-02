@@ -1,0 +1,22 @@
+{
+  "name": "chatroom",
+  "version": "1.0.0",
+  "description": "This is chatroom!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benchou1919/ChatRoom.git"
+  },
+  "author": "Ben Chou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benchou1919/ChatRoom/issues"
+  },
+  "homepage": "https://github.com/benchou1919/ChatRoom#readme",
+  "dependencies": {
+    "express": "^4.13.0"
+  }
+}
