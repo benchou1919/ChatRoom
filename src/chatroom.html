@@ -1,19 +1,31 @@
 <html>
 	<head>
 		<link rel=stylesheet type='text/css' href='chat.css'>
-		<script src='jquery-2.1.4.min.js'> </script>
+		<script src='js/jquery-2.1.4.min.js'> </script>
+		<script src='socket.io/socket.io.js'></script>
 		<script>
+			var name;
+			var socket = io('http://localhost:3000');
+			socket.on('news', function (data) {
+				console.log(data);
+				socket.emit('my other event', {my: 'data'});
+			});
+
 			/**
 			 * Capture text only from myself. (Currently)
 			 */
+
 			var updateTextArea = function() {
 				if($("#inputArea").val() == "") {
   					console.log("Nothing sent");
   				} else {
-  					$("#showArea").append("Ben: &nbsp; &nbsp; &nbsp;" + $("#inputArea").val() + "<br>");
+ 					
+  					$("#showArea").append(name + "&nbsp; &nbsp; &nbsp;" + $("#inputArea").val() + "<br>");
   					$("#showArea").animate({scrollTop: $("#showArea")[0].scrollHeight});
 
   					$("#inputArea").val("");
+  					
+  					socket.emit('messages', $("#inputArea").val());
   				}
 	  		};
 
@@ -30,6 +42,18 @@
 					}
 				});
 			});
+
+			$(document).ready( function() {
+				$( "#nameArea" ).keypress( function(e) {
+					if(e.which == 13) {
+						console.log("name entered");
+						name = $("#nameArea").val();
+						$("#nameArea").hide();
+					}
+				})
+			});
+
+			
 			
 		</script>
 	</head>
@@ -38,8 +62,9 @@
 		<h1> Chat Room </h1>
 
 		<div id='showArea'>
-
+			
 		</div>
+		<input type='text' id='nameArea'>
 
 		<input type='text' id='inputArea'>
 		<input type='submit' value='Enter' id='button'>

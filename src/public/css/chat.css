@@ -1,0 +1,65 @@
+#showArea {
+	margin:auto;
+	height: 500px;
+	width:1000px;
+	border:solid;
+	border-width:2px;
+	margin-bottom: 20px;
+	font: 25px Constantia, Cambria, Athelas, Monaco, serif; 
+	box-shadow: 4px 4px 15px #888;
+    border-radius: 5px;
+	overflow: scroll;
+	border-color: #AAA;
+}
+
+#nameArea {
+	border:solid;
+	border-width:2px;
+	height: 35px;
+	width:300px;
+	font:20px Courier, Candara, Cambria, Verdana, serif;
+	box-shadow: 4px 4px 15px #888;
+    border-radius: 5px;
+    border-color: #AAA;
+}
+
+#inputArea {
+	margin-left: 14.6%;
+	border:solid;
+	border-width:2px;
+	height: 35px;
+	width:900px;
+	font:20px Courier, Candara, Cambria, Verdana, serif;
+	box-shadow: 4px 4px 15px #888;
+    border-radius: 5px;
+    border-color: #AAA;
+}
+
+input[type='submit'] {
+    width: 100px;
+    text-align: center;
+    font: 20px Courier, Candara, Cambria, Verdana, serif; 
+    margin-left: 10px;
+    padding: 2px 6px 2px 6px;
+    box-shadow: 1px 1px 5px #888;
+    border-radius: 5px;
+
+}
+
+h1 {
+	text-align: center;
+	font: 60px Candara, Verdana, serif;
+	color:#777;
+}
+
+span.space {
+	margin-left: 32.5%;
+	font: 25px Courier, Candara, Cambria, Verdana, serif;
+}
+
+span.name {
+	display:inline-block;
+	width:200px;
+}
+
+

@@ -1,0 +1,28 @@
+html
+  head
+
+    link(rel='stylesheet', type='text/css', href='css/chat.css')
+    | &#x9;&#x9;
+    script(src='js/jquery-2.1.4.min.js')
+    | &#x9;&#x9;
+    script(src='socket.io/socket.io.js')
+    | &#x9;&#x9;
+    script(src='js/code.js')
+    | &#x9;&#x9;
+    
+  body
+  h1  Chat Room 
+  | &#x9;&#x9;
+  #showArea
+  | &#x9;&#x9;
+  br
+  | &#x9;&#x9;
+  span.space  Name: 
+  | &#x9;&#x9;
+  input#nameArea(type='text')
+  | &#x9;&#x9;
+  input#inputArea(type='text')
+  | &#x9;&#x9;
+  input#button(type='submit', value='Enter')
+
+
